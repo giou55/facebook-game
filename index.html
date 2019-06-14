@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Quiz Game</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/modal.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body onload="init()">
+
+<audio id="sd1"><source src="audio/win_sound.mp3" type="audio/mpeg"></audio>
+<audio id="sd2"><source src="audio/wrong_sound.mp3" type="audio/mpeg"></audio>
+	
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+      <div class="modal-header" id="msg1"></div>
+      <div class="modal-footer" id="msg2"></div>
+  </div>
+
+</div><!-- end of myModal Div -->
+	
+
+<div id="game">
+
+<div id="numbers">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+		<p>5</p>
+		<p>6</p>
+		<p>7</p>
+		<p>8</p>
+		<p>9</p>
+		<p>10</p>
+		<p>11</p>
+</div>
+	
+<div id="main">
+	
+<section id="container">
+    <div id="face">
+       <figure id="front"></figure>
+       <figure id="back"></figure>
+    </div>
+</section>	
+	
+<div id="about">
+</div>
+
+<div id="a">
+   <div id="w">Πληκτρολογήστε το όνομα που πιστεύετε οτι είναι η σωστή απάντηση:</div>
+      <form name="myForm" id="f">
+         <input class="f1" id="answer1" type="text" name="answer" maxlength="36" size="36"> <br>
+         <input class="b1" type="button" id="btn" name="submit" value="Υποβολή" onclick="submit_answer()" required>
+         <input class="b1" type="button" id="next_btn" onclick="next()" value="Επόμενο" />
+      </form>
+   </div>
+	
+</div> <!-- end of main Div -->
+
+	
+<div id="myProgress">
+  <div id="myBar">
+    <div id="label"></div>
+  </div>
+</div><!-- end of myProgress Div -->
+	
+	
+</div> <!-- end of game Div -->
+
+<script type="text/javascript" src="scripts/fb_game.js"></script>
+<script type="text/javascript" src="scripts/modal.js"></script>
+
+</body>
+</html>
